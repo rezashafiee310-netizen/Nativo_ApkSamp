@@ -58,8 +58,8 @@ public class Utils {
     // TODO: coloque aqui o link de convite real do seu servidor Discord (ex: https://discord.gg/xxxxxxx)
     public static String discord = "https://discord.gg/SEU_CONVITE";
     public static String changelog = web + "changelog.txt";
-    public static String hostedServersFileStr = web + "servers.json";
-    public static String bannedServersFileStr = web + "banned.json";
+    public static String hostedServersFileStr = "https://raw.githubusercontent.com/rezashafiee310-netizen/launcher-config/main/servers.json";
+    public static String bannedServersFileStr = "https://raw.githubusercontent.com/rezashafiee310-netizen/launcher-config/main/banned.json";
     public static String faqURL = web + "faq.json";
     public static String previewsUrl = web + "images/previews.json";
 
