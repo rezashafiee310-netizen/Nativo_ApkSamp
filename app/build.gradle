@@ -28,11 +28,18 @@ android {
         applyToBuildTypes = "ALL"
     }
 
+    // کلید ثابت (فقط برای تست). با این کلید نسخه‌ی جدید روی قبلی نصب می‌شه و فایل‌های بازی پاک نمی‌شن.
+    signingConfigs {
+        debug {
+            storeFile file("wildcity-test.keystore")
+            storePassword "wildcity123"
+            keyAlias "wildcity"
+            keyPassword "wildcity123"
+        }
+    }
+
     buildTypes {
         release {
-            // This source does not include a private release keystore.
-            // The runner's automatically generated debug key makes the
-            // GitHub Actions artifact installable for testing.
             signingConfig signingConfigs.debug
             minifyEnabled true
             shrinkResources true

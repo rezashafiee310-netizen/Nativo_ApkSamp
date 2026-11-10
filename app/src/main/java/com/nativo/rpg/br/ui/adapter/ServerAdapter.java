@@ -232,9 +232,11 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
             }
         } catch (Exception e) {
             e.printStackTrace();
+            // تشخیصی: خطا رو روی صفحه نشون می‌ده
             Toast.makeText(activity, "ERR: " + e, Toast.LENGTH_LONG).show();
         }
 
+        // تشخیصی: تعداد سرورهای لودشده رو نشون می‌ده
         Toast.makeText(activity, "COUNT: " + serverModel.size() + " hosted=" + is_hosted, Toast.LENGTH_LONG).show();
         notifyDataSetChanged();
 
