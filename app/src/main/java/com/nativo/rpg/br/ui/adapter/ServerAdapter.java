@@ -232,8 +232,10 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
             }
         } catch (Exception e) {
             e.printStackTrace();
+            Toast.makeText(activity, "ERR: " + e, Toast.LENGTH_LONG).show();
         }
 
+        Toast.makeText(activity, "COUNT: " + serverModel.size() + " hosted=" + is_hosted, Toast.LENGTH_LONG).show();
         notifyDataSetChanged();
 
         for (int i = 0; i < serverModel.size(); i++) {
